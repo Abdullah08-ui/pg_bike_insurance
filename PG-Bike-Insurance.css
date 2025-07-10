@@ -1,0 +1,3436 @@
+ /* --- CSS Variables for Theming --- */
+        :root {
+            --primary-blue: #0d2354;
+            --primary-green: #28a745;
+            --light-blue-bg: #e6f7ff;
+            --light-gray-bg: #f8f9fa;
+            --text-dark: #212529;
+           
+            --border-color: #dee2e6;
+        }
+
+        /* --- Global & Base Styles --- */
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: #fff;
+            line-height: 1.7;
+        }
+        .container2 {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 0px;
+        }
+        h1, h2, h3 {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.2rem); margin: 0 0 20px 0; }
+        h3 { font-size: 1.5rem; margin: 0 0 15px 0; }
+        p { margin: 0 0 1rem 0; color: var(--text-gray); }
+        ul { padding-left: 20px; margin-bottom: 1rem; color: var(--text-gray); }
+        li { margin-bottom: 0.5rem; }
+        a { color: var(--primary-blue); text-decoration: none; }
+        /* a:hover { text-decoration: underline; } */
+        .content-section { margin-bottom: 50px; }
+
+
+
+
+
+
+        
+        
+        /* --- Header / Navigation --- */
+        /* --- General & Reset --- */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+* { box-sizing: border-box; }
+.container { max-width: 1300px; margin: 0 auto; padding: 0 20px; width: 100%; }
+a { text-decoration: none; }
+
+
+
+
+
+
+/* --- Top Bar --- */
+/* --- Default Styles (for Desktop View > 1024px) --- */
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.top-bar {
+    background-color: #0d47a1; /* Dark Blue from image */
+    color: white;
+    padding: 8px 0;
+    font-size: 12px;
+    /* The bar is visible by default */
+    display: block; 
+}
+.logo img {
+  max-width: 180px; /* or any value like 150px, 200px */
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 140px; /* smaller on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 120px;
+  }
+}
+
+
+.container1 {
+  width: 100%;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 4px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+
+a { 
+    text-decoration: none; 
+}
+
+.top-bar-content { 
+    display: flex; 
+    justify-content: space-around; /* Distributes items evenly */
+    align-items: center; 
+    gap: 1px; /* Space between items */
+}
+
+.top-bar a { 
+    color: white; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+    white-space: nowrap; /* Prevents text from breaking into a new line */
+}
+
+.click-here { 
+    background-color: #fff; 
+    color: #2e7d32; /* Green text color */
+    padding: 3px 8px; 
+    border-radius: 4px; 
+    font-weight: 500; 
+}
+
+
+/* --- THE RESPONSIVE RULE TO HIDE THE BAR --- */
+
+/* This rule applies ONLY to screens that are 1024px wide or smaller. */
+@media (max-width: 1024px) {
+    
+    /* Find the .top-bar element and hide it completely. */
+    .top-bar {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+/* --- Main Navigation --- */
+.main-nav { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.08); padding: 15px 0; position: relative; z-index: 1000; }
+.main-nav .container1 { display: flex; justify-content: space-between; align-items: center; }
+
+/* Logo */
+.logo { font-size: 2.5rem; font-weight: 700; color: #1e88e5; /* Bright Blue */ }
+.logo span { color: #37474f; /* Dark Grey */ }
+
+/* --- Desktop Styles --- */
+/* DESKTOP / BASE STYLES */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #37474f;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #1e88e5;
+}
+
+.contact-info-desktop {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.contact-info-desktop a {
+  color: #37474f;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* TABLET AND BELOW */
+@media (max-width: 1024px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .contact-info-desktop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .nav-links a,
+  .contact-info-desktop a {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Desktop Dropdown (Hover) */
+.dropdown { position: relative; }
+.dropdown-content { display: none; position: absolute; top: 50%; left: -15px; background-color: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 5px; list-style: none; padding: 10px 0; margin-top: 15px; min-width: 200px; opacity: 0; transform: translateY(10px); transition: opacity 0.2s ease, transform 0.2s ease; }
+.dropdown-content a { padding: 10px 20px; display: block; white-space: nowrap; }
+.dropdown:hover .dropdown-content { display: block; opacity: 1; transform: translateY(0); }
+
+/* --- Initial State for Mobile (Hidden Elements) --- */
+.hamburger-menu { display: none; }
+.contact-info-mobile { display: none; }
+
+/* --- Responsive Media Queries for Mobile --- */
+@media (max-width: 900px) {
+    /* Hide desktop-only elements */
+    .contact-info-desktop { display: none; }
+    
+    /* Show the hamburger icon */
+    .hamburger-menu { display: block; cursor: pointer; background: none; border: none; padding: 0; z-index: 1001; }
+    .hamburger-menu .bar { display: block; width: 28px; height: 3px; margin: 6px auto; background-color: #333; transition: all 0.3s ease-in-out; }
+    .hamburger-menu.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .hamburger-menu.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger-menu.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    /* The FIX: Style the mobile menu container */
+    .nav-menu {
+        display: none; /* HIDE the menu by default on mobile */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active {
+        display: flex; /* SHOW the menu when JS adds the .active class */
+    }
+
+    /* Style items inside the mobile menu */
+    .nav-links { flex-direction: column; gap: 0; width: 100%; }
+    .nav-links li { width: 100%; border-bottom: 1px solid #eee; }
+    .nav-links li:last-child { border-bottom: none; }
+    .nav-links a { padding: 15px 5px; display: block; width: 100%; }
+    
+    /* Mobile Dropdown (Click) */
+    .dropdown > a { display: flex; justify-content: space-between; align-items: center; }
+    .dropdown-content { display: none; position: static; box-shadow: none; background-color: #f8f9fa; padding-left: 20px; margin: 0; opacity: 1; transform: none; border-radius: 0; border-top: 1px solid #eee; }
+    .dropdown:hover .dropdown-content { display: none; } /* Disable hover on mobile */
+    .dropdown.active > .dropdown-content { display: block; } /* Show content when parent is active */
+    
+    /* Show mobile contact info */
+    .contact-info-mobile { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; width: 100%; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        /* --- Hero Section --- */
+      /* --- General Setup --- */
+/* Reset and base styles */
+/* --- General Setup --- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* A modern font similar to the one in the image */
+    background-color: #fdfdfd; /* A very light off-white background */
+    color: #333;
+}
+
+/* --- Hero Section Styles (Mobile-First) --- */
+.hero-section {
+    padding: 40px 20px; /* Padding for top/bottom and sides */
+}
+
+.hero-container {
+    max-width: 1300px;
+    margin: 0 auto; /* Center the container */
+    
+    display: flex;
+    flex-direction: column; /* MOBILE FIRST: Stacks the text and image vertically */
+    align-items: center; /* Centers items for a clean mobile look */
+    gap: 30px; /* Space between the image and text on mobile */
+}
+
+/* --- Text Content Styles --- */
+.hero-text-content {
+    text-align: center; /* Center-align text on mobile */
+    /* By default, this will appear below the image in the HTML flow */
+}
+
+.hero-text-content h1 {
+    font-size: 2.8rem; /* A strong, readable size for mobile headings */
+    font-weight: 700;
+    line-height: 1.2;
+    color: #2c2c2c; /* A dark grey, softer than pure black */
+    margin: 0 0 24px 0; /* Space only below the heading */
+}
+
+.hero-text-content p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.price-highlight {
+    font-weight: 700;
+    color: #28a745; /* A vibrant, friendly green */
+}
+
+
+/* --- Image Content Styles --- */
+.hero-image-content {
+    width: 100%; /* Make the image container fill the column */
+}
+
+.hero-image-content img {
+    width: 100%; /* This is the key to making the image responsive */
+    height: auto; /* This maintains the image's aspect ratio */
+    display: block; /* Removes extra space sometimes added below images */
+    border-radius: 8px; /* Optional: adds subtle rounded corners */
+}
+
+
+/* --- Responsive Styles for Tablets & Desktops --- */
+
+/* This media query applies styles ONLY when the screen is 768px or wider */
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 60px 40px; /* Increase padding on larger screens */
+    }
+
+    .hero-container {
+        /* flex-direction: row;  */
+        align-items: center; /* Vertically align items to the middle */
+        gap: 50px; /* Increase the space between the two columns */
+    }
+
+    .hero-text-content {
+        flex: 1; /* Allow the text column to take up 50% of the space */
+        text-align: left; /* Align text to the left for a classic desktop look */
+    }
+    
+    .hero-image-content {
+        flex: 1; /* Allow the image column to take up the other 50% */
+    }
+
+    .hero-text-content h1 {
+        font-size: 4.8rem; /* Make the heading larger on desktop for more impact */
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .hero-section {
+        padding: 60px 40px; /* Increase padding on larger screens */
+    }
+
+    .hero-container {
+        flex-direction: row; 
+        align-items: center; /* Vertically align items to the middle */
+        gap: 50px; /* Increase the space between the two columns */
+    }
+
+    .hero-text-content {
+        flex: 1; /* Allow the text column to take up 50% of the space */
+        text-align: left; /* Align text to the left for a classic desktop look */
+    }
+    
+    .hero-image-content {
+        flex: 1; /* Allow the image column to take up the other 50% */
+    }
+
+    .hero-text-content h1 {
+        font-size: 3.8rem; /* Make the heading larger on desktop for more impact */
+    }
+}
+
+
+
+@media (min-width: 1900px) {
+    .hero-section {
+        padding: 6px 40px; /* Increase padding on larger screens */
+    }
+
+    .hero-container {
+        flex-direction: row; 
+        align-items: center; /* Vertically align items to the middle */
+        gap: 50px; /* Increase the space between the two columns */
+    }
+
+    .hero-text-content {
+        flex: 1; /* Allow the text column to take up 50% of the space */
+        text-align: left; /* Align text to the left for a classic desktop look */
+    }
+    
+    .hero-image-content {
+        flex: 1; /* Allow the image column to take up the other 50% */
+    }
+
+    .hero-text-content h1 {
+        font-size: 4.8rem; /* Make the heading larger on desktop for more impact */
+    }
+}
+
+
+
+
+
+
+
+
+        /* --- Main Layout: Two Columns --- */
+       /* --- General Setup & Variables --- */
+:root {
+    --primary-blue: #0A4A8E;
+    --light-blue-bg: #e9f5fe;
+    --primary-green: #28a745;
+    --dark-text: #2c3e50;
+    --light-text: #555;
+    --border-color: #ddd;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: var(--light-text);
+    line-height: 1.7;
+}
+
+.page-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Mobile-first: stack columns */
+    gap: 30px;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    color: var(--primary-blue);
+    font-weight: 700;
+    line-height: 1.3;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.25rem; }
+
+/* --- Main Content Specific Styles --- */
+.main-content { flex: 2; }
+.main-content section { margin-bottom: 40px; }
+
+
+
+
+
+
+
+/* Bike Plans Section */
+/* --- General Setup & Variables --- */
+:root {
+    --primary-blue: #0A4A8E;
+    --light-blue-gradient: linear-gradient(to bottom right, #e9f5fe, #ffffff);
+    --dark-text: #2c3e50;
+    --light-grey-bg: #f0f2f5;
+    --border-color: #e0e0e0;
+}
+
+
+
+/* --- Main Component Container --- */
+.plans-section {
+    background: var(--light-blue-gradient);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 900px;
+}
+
+.plans-section h2 {
+    font-size: 1.75rem;
+    color: var(--primary-blue);
+    margin: 0 0 10px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* --- Tab Styles --- */
+.plan-tabs {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: transparent;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: var(--primary-blue);
+}
+
+.tab-btn.active {
+    background-color: var(--light-grey-bg);
+    color: var(--dark-text);
+    border-color: var(--border-color);
+}
+
+/* --- Plan List Styles (Mobile-First) --- */
+.plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.plan-list li {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    
+    /* Mobile Layout: Flexbox that wraps */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+
+
+.plan-list img {
+    height: 30px;
+    flex-shrink: 0; /* Prevents the logo from shrinking */
+}
+
+.plan-features {
+    display: flex;
+    flex-direction: column; /* Stack features vertically on mobile */
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.plan-features span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Style the checkmark */
+.plan-features span::before {
+    content: '✔';
+    color: #fff;
+    background-color: var(--dark-text);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+.btn-buy {
+    background-color: var(--primary-blue);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s;
+    /* On mobile, make the button take up the full width for better touch access */
+    width: 100%; 
+}
+
+.btn-buy:hover {
+    background-color: #083b70;
+}
+
+
+/* --- Responsive Styles for Desktop --- */
+
+/* This media query applies ONLY when the screen is 768px or wider */
+@media (min-width: 768px) {
+    .plan-list li {
+        flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+        justify-content: space-between;
+    }
+    
+    .plan-features {
+        flex-direction: row;
+        gap: 25px; /* Increase space between features */
+        /* Center the features between logo and button */
+        flex-grow: 1; 
+        justify-content: center;
+    }
+
+    .btn-buy {
+        width: auto; /* Let the button size to its content */
+    }
+}
+
+
+
+
+
+
+/* --- General Setup & Variables --- */
+:root {
+    --primary-blue: #0A4A8E;
+    --dark-text: #333333;
+    --light-text: #555555;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: var(--light-text);
+    line-height: 1.7; /* Generous line height for readability */
+}
+
+/* --- Main Content Section --- */
+.content-section {
+    padding: 40px 20px; /* Padding for mobile view */
+}
+
+.container {
+    max-width: 800px; /* Constrains line length for comfortable reading */
+    margin: 0 auto;
+}
+
+/* --- Typography --- */
+h1 {
+    font-size: 2.5rem; /* Base font size for mobile */
+    font-weight: 700;
+    color: var(--primary-blue);
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+
+.intro-paragraph {
+    font-size: 1rem;
+    color: var(--dark-text);
+    margin: 0;
+}
+
+/* --- List Styling --- */
+.standard-list {
+    list-style-type: disc; /* Standard black disc bullets */
+    padding-left: 20px; /* Standard indentation */
+    margin: 0 0 40px 0;
+    color: var(--dark-text);
+}
+
+.insurance-info {
+    margin-top: 40px;
+}
+
+.policy-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 40px 0 0 0;
+}
+
+.policy-list li {
+    padding-left: 25px; /* Create space for our custom bullet */
+    position: relative; /* This is the anchor for the pseudo-element */
+    margin-bottom: 30px;
+}
+
+/* Custom Blue Bullet Point */
+.policy-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 2px; /* Fine-tune vertical alignment */
+    
+    color: var(--primary-blue);
+    font-size: 1.8rem; /* Make the bullet larger than the text */
+    line-height: 1; /* Prevent the large font from adding extra vertical space */
+}
+
+.policy-list h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin: 0 0 10px 0;
+}
+
+.policy-list p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+/* --- Responsive Adjustments for Larger Screens --- */
+
+@media (min-width: 768px) {
+    .content-section {
+        padding: 60px 40px; /* More padding on desktop */
+    }
+
+    h1 {
+        font-size: 3.2rem; /* Increase heading size for more impact */
+    }
+
+    .intro-paragraph {
+        font-size: 1.1rem;
+    }
+
+    .policy-list h2 {
+        font-size: 1.7rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Comparison Of Bike Insurance Policies */
+
+/* --- General Setup & Variables --- */
+:root {
+  --primary-blue: #0a4a8e;
+  --tick: #28a745;
+  --cross: #e74c3c;
+  --border: #dee2e6;
+  --text: #333;
+  --light-text: #555;
+}
+
+
+
+.content-wrapper {
+  max-width: 1200px;
+  padding: 2px 0px;
+  /* margin: -25px; */
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: var(--light-text);
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+
+
+.comparison-table {
+ table-layout: fixed;
+  width: 100%;
+    min-width: 238px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.5rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  /* padding: 0.5rem; */
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.comparison-table th:first-child {
+    text-align: -webkit-left;
+/*    padding: 1.5rem 2rem;*/
+  border: 1px solid #ddd;
+}
+
+.comparison-table th:nth-child(2n) {
+  box-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.15);
+}
+
+.comparison-table th:nth-child(2n),
+.comparison-table td:nth-child(2n) {
+  position: relative;
+/*  background: #fff;*/
+}
+
+.comparison-table td:not(:first-child) {
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .comparison-table {
+    font-size: 0.875rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .comparison-table {
+    font-size: 1rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 14px 4px;
+      font-weight: 700;
+  }
+}
+
+
+/* experts-section */
+
+
+:root {
+  --primary-blue: #04447E;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 0px;
+  box-sizing: border-box;
+}
+
+.experts-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.experts-section p {
+  font-size: 1rem;
+  color: black;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .experts-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .experts-section p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experts-section h2 {
+    font-size: 2rem;
+  }
+
+  .experts-section p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+/* Insurance-container */
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container --- */
+        .insurance-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+/*            font-size: 2.8rem;*/
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin: 0;
+        }
+
+        /* --- Custom List Styling --- */
+        .reasons-list {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        .reasons-list li {
+            position: relative; /* Needed for positioning the pseudo-element */
+            padding-left: 35px; /* Create space for the custom bullet */
+            margin-bottom: 2.5rem; /* Space between list items */
+        }
+
+        /* Create the custom blue bullet point */
+        .reasons-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 2px; /* Fine-tune vertical alignment */
+            color: #04447E; /* Bullet color */
+            font-size: 2.2rem; /* Bullet size */
+            font-weight: bold;
+            line-height: 1; /* Prevent extra line height from affecting layout */
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+
+            .insurance-container {
+                /* padding: 1rem; */
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .reasons-list li {
+                padding-left: 30px; /* Slightly reduce indent for small screens */
+            }
+
+            .reasons-list li::before {
+                font-size: 2rem;
+                top: 0px;
+            }
+        }
+
+           @media (min-width: 320px) {
+            h1 {
+                min-width: 290px;
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .reasons-list li {
+                padding-left: 30px; /* Slightly reduce indent for small screens */
+            }
+
+            .reasons-list li::before {
+                font-size: 2rem;
+                top: 0px;
+            }
+        }
+        
+
+
+
+
+        /* insurance-container2 */
+
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container --- */
+        .insurance-container2 {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            position: relative; /* Needed for positioning the custom bullet */
+            padding-left: 35px; /* Create space for the bullet */
+            color: #04447E;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Create the large blue bullet point for section titles */
+        .section-title::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 2px; /* Fine-tune vertical alignment */
+            color: #04447E; /* Bullet color */
+            font-size: 2.5rem; /* Bullet size */
+            line-height: 1;
+        }
+
+        /* --- List Styling --- */
+        .coverage-list {
+            list-style-type: disc; /* Use standard disc bullets */
+            padding-left: 55px; /* Indent the list */
+            color: #555; /* Set the color for the bullets */
+            margin: 0;
+        }
+
+        .coverage-list li {
+            padding-left: 8px; /* Space between bullet and text */
+            margin-bottom: 1rem;
+            color: #444; /* Set the color for the list text */
+        }
+
+        .coverage-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .coverage-list li strong {
+            color: #333333; /* Make the bolded text slightly darker */
+            font-weight: 600;
+        }
+
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .insurance-container2 {
+                /* padding: 1rem; */
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .coverage-list {
+                padding-left: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+                padding-left: 30px;
+            }
+
+            .section-title::before {
+                font-size: 2rem;
+                top: 0px;
+            }
+            
+            .coverage-list {
+                padding-left: 40px;
+            }
+            
+            .coverage-list li {
+                font-size: 0.95rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        /* addons-container */
+
+body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container --- */
+        .addons-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin: 0;
+        }
+
+        /* --- Custom List Styling --- */
+        .addons-list {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        .addons-list li {
+            position: relative; /* Needed for positioning the pseudo-element */
+            padding-left: 35px; /* Create space for the custom bullet */
+            margin-bottom: 2.5rem; /* Space between list items */
+        }
+        
+        .addons-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Create the custom blue bullet point */
+        .addons-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 2px; /* Fine-tune vertical alignment */
+            color: #04447E; /* Bullet color */
+            font-size: 2.2rem; /* Bullet size */
+            font-weight: bold;
+            line-height: 1; /* Prevent extra line height from affecting layout */
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            body {
+                padding: 1px;
+            }
+
+            .addons-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .addons-list li {
+                padding-left: 30px; /* Slightly reduce indent for small screens */
+            }
+
+            .addons-list li::before {
+                font-size: 2rem;
+                top: 0px;
+            }
+        }
+
+
+
+
+/* price-container */
+
+
+/* --- General Body & Font Styles --- */
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px; */
+        }
+
+        /* --- Main Container --- */
+          .price-container {
+            max-width: 850px;
+            margin: 2rem auto;
+            /* padding: 2rem; */
+        }
+        .content-wrapper {
+  max-width: 1200px;
+  padding: 2px 0px;
+  /* margin: -25px; */
+  box-sizing: border-box;
+}
+
+
+
+.comparison-table1 {
+ table-layout: fixed;
+  width: 100%;
+    min-width: 238px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.58rem;
+}
+
+.comparison-table1 th,
+.comparison-table1 td {
+    text-align: center;
+  /* padding: 0.5rem; */
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.comparison-table1 th:first-child {
+    /* text-align: -webkit-left; */
+/*    padding: 1.5rem 2rem;*/
+  border: 1px solid #ddd;
+}
+
+.comparison-table1 th:nth-child(2n) {
+  box-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.15);
+}
+
+.comparison-table1 th:nth-child(2n),
+.comparison-table1 td:nth-child(2n) {
+  position: relative;
+/*  background: #fff;*/
+}
+
+.comparison-table1 td:not(:first-child) {
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .comparison-table1 {
+    font-size: 0.875rem;
+  }
+  
+  .comparison-table1 th,
+  .comparison-table1 td {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .comparison-table1 {
+    font-size: 1rem;
+  }
+  
+  .comparison-table1 th,
+  .comparison-table1 td {
+    padding: 14px 4px;
+      font-weight: 700;
+  }
+}
+
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: #04447E;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #000;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* --- Responsive Table --- */
+      
+        
+        
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .comparison-table1 {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                margin-top: 2rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+
+
+
+/* Bike Insurance Policies 2025 */
+
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container --- */
+        .policy-container {
+            max-width: 850px;
+           margin: 2rem auto;
+/*            padding: 2rem;*/
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* --- List Styling --- */
+        .features-list {
+            list-style-type: disc; /* Standard disc bullets */
+            padding-left: 25px; /* Indent the list */
+            color: #555; /* Color for the bullets */
+            margin: 2rem 0; /* Vertical spacing around the list */
+        }
+
+        .features-list li {
+            padding-left: 5px; /* Space between bullet and text */
+            margin-bottom: 0.75rem;
+            color: #444; /* Color for the list item text */
+        }
+
+        .features-list li:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* --- Responsive Table --- */
+        .table-wrapper {
+/*            overflow-x: auto;  Makes table scrollable on small screens */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            border: 1px solid #ccc;
+            margin-top: 2rem;
+        }
+        
+        .comparison-table2 {
+ table-layout: fixed;
+/*  width: 100%;*/
+    min-width: 238px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.55rem;
+}
+
+.comparison-table2 th,
+.comparison-table2 td {
+    text-align: center;
+  /* padding: 0.5rem; */
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.comparison-table2 th:first-child {
+    /* text-align: -webkit-left; */
+/*    padding: 1.5rem 2rem;*/
+  border: 1px solid #ddd;
+}
+
+.comparison-table2 th:nth-child(2n) {
+  box-shadow: 0 0 2rem hsla(0, 0%, 0%, 0.15);
+}
+
+.comparison-table2 th:nth-child(2n),
+.comparison-table1 td:nth-child(2n) {
+  position: relative;
+/*  background: #fff;*/
+}
+
+.comparison-table2 td:not(:first-child) {
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .comparison-table2 {
+    font-size: 0.875rem;
+  }
+  
+  .comparison-table2 th,
+  .comparison-table2 td {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .comparison-table2 {
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  
+  .comparison-table2 th,
+  .comparison-table2 td {
+    padding: 14px 4px;
+/*      font-weight: 700;*/
+  }
+}
+
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: #04447E;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #000;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* --- Responsive Table --- */
+      
+        
+        
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .comparison-table2 {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+                margin-top: 2rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+
+
+
+
+
+
+        /* Bike Insurance Premium Online? */
+
+
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px; */
+        }
+
+        /* --- Main Container --- */
+        .calculator-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2.5rem;
+        }
+
+        h3 {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Custom List Styling --- */
+        .steps-list {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin-top: 3rem;
+        }
+
+        .steps-list li {
+            position: relative; /* Needed for positioning the pseudo-element */
+            padding-left: 35px; /* Create space for the custom bullet */
+            margin-bottom: 2.5rem; /* Space between list items */
+        }
+        
+        .steps-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Create the custom blue bullet point */
+        .steps-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 2px; /* Fine-tune vertical alignment */
+            color: #04447E; /* Bullet color */
+            font-size: 2.2rem; /* Bullet size */
+            font-weight: bold;
+            line-height: 1; /* Prevent extra line height from affecting layout */
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .calculator-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 2rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .steps-list li {
+                padding-left: 30px; /* Slightly reduce indent for small screens */
+            }
+
+            .steps-list li::before {
+                font-size: 2rem;
+                top: 0px;
+            }
+        }
+
+
+
+
+        /* factors-container */
+
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+/*            padding: 20px; */
+        }
+
+        /* --- Main Container --- */
+        .factors-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 3.5rem;
+        }
+
+        h3 {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /* --- Custom List Styling --- */
+        .factors-list {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        .factors-list li {
+            position: relative; /* Needed for positioning the pseudo-element */
+            padding-left: 35px; /* Create space for the custom bullet */
+            margin-bottom: 2.5rem; /* Space between list items */
+        }
+        
+        .factors-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Create the custom blue bullet point */
+        .factors-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 2px; /* Fine-tune vertical alignment */
+            color: #04447E; /* Bullet color */
+            font-size: 2.2rem; /* Bullet size */
+            font-weight: bold;
+            line-height: 1; /* Prevent extra line height from affecting layout */
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+/*
+            body {
+                padding: 15px;
+            }
+*/
+
+            .factors-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .factors-list li {
+                padding-left: 30px; /* Slightly reduce indent for small screens */
+            }
+
+            .factors-list li::before {
+                font-size: 2rem;
+                top: 0px;
+            }
+        }
+
+
+
+
+
+/* save-premium-container */
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+/*            padding: 20px; */
+        }
+
+        /* --- Main Container --- */
+        .save-premium-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+/*            padding: 2rem;*/
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E#04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /* --- Custom List Styling --- */
+        .tips-list {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin-top: 3rem;
+        }
+
+        .tips-list li {
+            position: relative; /* Needed for positioning the pseudo-element */
+            padding-left: 35px; /* Create space for the custom bullet */
+            margin-bottom: 2.5rem; /* Space between list items */
+        }
+        
+        .tips-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Create the custom blue bullet point */
+        .tips-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 2px; /* Fine-tune vertical alignment */
+            color:#04447E; /* Bullet color */
+            font-size: 2.2rem; /* Bullet size */
+            font-weight: bold;
+            line-height: 1; /* Prevent extra line height from affecting layout */
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+/*
+            body {
+                padding: 15px;
+            }
+*/
+
+            .save-premium-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .tips-list li {
+                padding-left: 30px; /* Slightly reduce indent for small screens */
+            }
+
+            .tips-list li::before {
+                font-size: 2rem;
+                top: 0px;
+            }
+        }
+
+
+
+
+
+/* benefits-container */
+
+body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container --- */
+        .benefits-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /* --- Custom List Styling --- */
+        .benefits-list {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin-top: 3rem;
+        }
+
+        .benefits-list li {
+            position: relative; /* Needed for positioning the pseudo-element */
+            padding-left: 35px; /* Create space for the custom bullet */
+            margin-bottom: 2.5rem; /* Space between list items */
+        }
+        
+        .benefits-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Create the custom blue bullet point */
+        .benefits-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 2px; /* Fine-tune vertical alignment */
+            color: #04447E; /* Bullet color */
+            font-size: 2.2rem; /* Bullet size */
+            font-weight: bold;
+            line-height: 1; /* Prevent extra line height from affecting layout */
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .benefits-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .benefits-list li {
+                padding-left: 30px; /* Slightly reduce indent for small screens */
+            }
+
+            .benefits-list li::before {
+                font-size: 2rem;
+                top: 0px;
+            }
+        }
+
+
+
+
+
+
+/* buy-renew-container */
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container --- */
+        .buy-renew-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        /* --- Features List Styling --- */
+        .features-list {
+            list-style-type: disc;
+            padding-left: 25px;
+            color: #555;
+            margin: 1.5rem 0 3.5rem 0; /* Vertical spacing around the list */
+        }
+
+        .features-list li {
+            padding-left: 5px;
+            margin-bottom: 0.5rem;
+            color: #444;
+        }
+        
+        /* --- Steps Section Styling --- */
+        .step {
+            margin-bottom: 2.5rem;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step p {
+            margin-bottom: 0;
+        }
+        
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .buy-renew-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+            
+            .features-list {
+                margin: 1.5rem 0 2.5rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            p, .features-list li {
+                font-size: 0.9rem;
+            }
+            
+            .features-list {
+                padding-left: 20px;
+            }
+        }
+
+
+
+
+
+
+/* kyc-container */
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+/*            padding: 20px; */
+        }
+
+        /* --- Main Container --- */
+        .kyc-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+/*            padding: 2rem;*/
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color:#04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* --- List Styling --- */
+        .documents-list {
+            list-style-type: disc; /* Standard disc bullets */
+            padding-left: 25px; /* Indent the list */
+            color: #555; /* Color for the bullets */
+            margin-top: 2rem; 
+        }
+
+        .documents-list li {
+            padding-left: 5px; /* Space between bullet and text */
+            margin-bottom: 0.75rem;
+            color: #444; /* Color for the list item text */
+        }
+
+        .documents-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .kyc-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            p, .documents-list li {
+                font-size: 0.9rem;
+            }
+
+            .documents-list {
+                padding-left: 20px;
+            }
+        }
+
+
+
+/* claim-container */
+
+         body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container --- */
+        .claim-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* --- Section Styling --- */
+        .claim-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .claim-section p {
+            margin-bottom: 0;
+        }
+        
+        .how-to-file-intro {
+            font-weight: 600;
+            color: #333;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* --- List Styling --- */
+        .claim-steps-list {
+            list-style-type: disc;
+            padding-left: 25px;
+            color: #555;
+        }
+
+        .claim-steps-list li {
+            padding-left: 5px;
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        .claim-steps-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .claim-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+            
+            p, .claim-steps-list li {
+                font-size: 0.9rem;
+            }
+
+            .claim-steps-list {
+                padding-left: 20px;
+            }
+        }
+
+
+/* terms-container */
+
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container --- */
+        .terms-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 3.5rem;
+        }
+
+        h3 {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444444;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /* --- Custom List Styling --- */
+        .terms-list {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        .terms-list li {
+            position: relative; /* Needed for positioning the pseudo-element */
+            padding-left: 35px; /* Create space for the custom bullet */
+            margin-bottom: 2.5rem; /* Space between list items */
+        }
+        
+        .terms-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Create the custom blue bullet point */
+        .terms-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 2px; /* Fine-tune vertical alignment */
+            color: #0d47a1; /* Bullet color */
+            font-size: 2.2rem; /* Bullet size */
+            font-weight: bold;
+            line-height: 1; /* Prevent extra line height from affecting layout */
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .terms-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            .terms-list li {
+                padding-left: 30px; /* Slightly reduce indent for small screens */
+            }
+
+            .terms-list li::before {
+                font-size: 2rem;
+                top: 0px;
+            }
+        }
+
+
+
+
+
+
+/* faq-container */
+
+body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container --- */
+        .faq-container {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography --- */
+        h1 {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-category {
+            color: #04447E;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        /* --- Accordion (FAQ) Styling --- */
+        .accordion-item {
+            background-color: #f2f2f2;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .accordion-item summary {
+            position: relative;
+            display: block;
+          padding: 12px 34px 11px 6px; /* Make space for the icon */
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        /* Hide default arrow/marker */
+        .accordion-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .accordion-item summary {
+            list-style: none;
+        }
+
+        /* Custom Arrow Icon */
+        .accordion-item summary::after {
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0);
+            width: 18px;
+            height: 18px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-size: contain;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Rotate arrow when open */
+        .accordion-item[open] > summary::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        /* Answer content styling */
+        .accordion-content {
+            padding: 0 20px 20px 20px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .faq-container {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .faq-category {
+                font-size: 1.3rem;
+            }
+
+            .accordion-item summary {
+                font-size: 0.95rem;
+            }
+            .accordion-content {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .faq-category {
+                font-size: 1.2rem;
+            }
+        }
+
+
+
+
+
+/* claim-faq-section */
+
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px; / */
+        }
+
+        /* --- Main Container --- */
+        .claim-faq-section {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography with new class names --- */
+        .claim-faq-title {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        /* --- Accordion Styling with new class names --- */
+        .claim-accordion__item {
+            background-color: #f2f2f2;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .claim-accordion__question {
+            position: relative;
+            display: block;
+               padding: 12px 34px 11px 6px; /* Make space for the icon */
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        /* Hide default arrow/marker */
+        .claim-accordion__question::-webkit-details-marker {
+            display: none;
+        }
+        .claim-accordion__question {
+            list-style: none;
+        }
+
+        /* Custom Arrow Icon */
+        .claim-accordion__question::after {
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0);
+            width: 18px;
+            height: 18px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-size: contain;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Rotate arrow when open */
+        .claim-accordion__item[open] > .claim-accordion__question::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        /* Answer content styling */
+        .claim-accordion__answer {
+            padding: 0 20px 20px 20px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .claim-faq-section {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            .claim-faq-title {
+                font-size: 1.5rem;
+            }
+
+            .claim-accordion__question {
+                font-size: 0.95rem;
+            }
+            .claim-accordion__answer {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .claim-faq-title {
+                font-size: 1.3rem;
+            }
+        }
+
+
+
+
+/* renewal-faq-block */
+
+body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.7;
+            margin: 0;
+            /* padding: 20px;  */
+        }
+
+        /* --- Main Container with new class name --- */
+        .renewal-faq-block {
+            max-width: 850px;
+            margin: 2rem auto; /* Center the container with vertical margin */
+            /* padding: 2rem; */
+        }
+
+        /* --- Typography with new class name --- */
+        .renewal-faq-heading {
+            color: #04447E; /* A deep, professional blue */
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        /* --- Accordion Styling with new class names --- */
+        .renewal-accordion__panel {
+            background-color: #f2f2f2;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .renewal-accordion__trigger {
+            position: relative;
+            display: block;
+            padding: 12px 34px 11px 6px; /* Make space for the icon */
+            cursor: pointer;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        /* Hide default arrow/marker */
+        .renewal-accordion__trigger::-webkit-details-marker {
+            display: none;
+        }
+        .renewal-accordion__trigger {
+            list-style: none;
+        }
+
+        /* Custom Arrow Icon */
+        .renewal-accordion__trigger::after {
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0);
+            width: 18px;
+            height: 18px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-size: contain;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Rotate arrow when open */
+        .renewal-accordion__panel[open] > .renewal-accordion__trigger::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        /* Answer content styling */
+        .renewal-accordion__content {
+            padding: 0 20px 20px 20px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        @media (max-width: 768px) {
+            /* body {
+                padding: 15px;
+            } */
+
+            .renewal-faq-block {
+                padding: 0rem;
+                margin: 1rem auto;
+            }
+
+            .renewal-faq-heading {
+                font-size: 1.5rem;
+            }
+
+            .renewal-accordion__trigger {
+                font-size: 0.95rem;
+            }
+            .renewal-accordion__content {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .renewal-faq-heading {
+                font-size: 1.3rem;
+            }
+        }
+
+
+
+
+
+/* explore-section */
+
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff; /* Fallback background */
+            color: #333333;
+            line-height: 1.5;
+            margin: 0;
+            /* padding: 40px 20px;  */
+        }
+
+        /* --- Main Container Styling --- */
+        .explore-section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            border-radius: 15px;
+            /* Soft blue gradient background to match the image */
+            background-image: radial-gradient(circle, #edf7ff, #e3f2fd, #d4eaf7);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* --- Title Styling --- */
+        .explore-title {
+            color: #0d47a1; /* A deep, professional blue */
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+        }
+
+        /* --- Grid Layout for the Cards --- */
+        .explore-grid {
+            display: grid;
+            /* Create 3 equal columns */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* Space between the cards */
+        }
+
+        /* --- Individual Card Styling --- */
+        .explore-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 20px;
+            min-height: 80px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+            color: #0d47a1;
+            font-weight: 600;
+            text-align: center;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        /* Hover effect for interaction */
+        .explore-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(13, 71, 161, 0.1);
+        }
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        
+        /* For tablets */
+        @media (max-width: 992px) {
+            .explore-title {
+                font-size: 2.2rem;
+            }
+            .explore-section {
+                padding: 2rem;
+            }
+        }
+        
+        /* For smaller tablets */
+        @media (max-width: 768px) {
+            .explore-grid {
+                /* Switch to 2 columns */
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* For mobile phones */
+        @media (max-width: 576px) {
+            .explore-title {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            .explore-section {
+                padding: 1.5rem;
+            }
+            .explore-grid {
+                /* Switch to a single column */
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .explore-card {
+                min-height: 70px;
+                padding: 15px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Features Table */
+.table-container { overflow-x: auto; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+thead th {
+    /* background-color: var(--primary-blue);
+    color: white; */
+    font-weight: 600;
+}
+tbody tr:nth-child(even) { background-color: #f9f9f9; }
+
+/* --- Sidebar Specific Styles --- */
+.sidebar { flex: 1; }
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid #eef;
+}
+.card .subtitle {
+     color: var(--dark-text);
+      font-weight: 500;
+      font-size: 19px;
+    }
+.card .highlight {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+    padding-bottom: 2px;
+}
+
+/* Sidebar Form */
+form { 
+
+    margin: 10px;
+    display: flex;
+     flex-direction: column;
+      gap: 15px;
+     }
+.form-group { display: flex; gap: 10px; }
+.form-group input { flex: 1; }
+/* Base style (desktop and general) */
+input[type="text"],
+input[type="email"],
+input[type="text"] {
+  font-size: 14px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="text"] {
+    font-size: 12px; /* Slightly smaller for mobile */
+    padding: 10px; /* Adjust padding to fit smaller screen */
+  }
+}
+
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="text"] {
+    font-size: 12px; /* Slightly smaller for mobile */
+    padding: 10px; /* Adjust padding to fit smaller screen */
+  }
+}
+
+/* Optional: Extra small devices (e.g., under 480px) */
+@media (max-width: 480px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="text"] {
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+
+form label { font-size: 0.9rem; font-weight: 500; color: var(--dark-text); }
+
+/* Checklist */
+.checklist { list-style: none; padding: 0; }
+.checklist li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.checklist li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #fff;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+/* Logo Grid */
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.logo-item {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.logo-item img { max-width: 100%; height: auto; }
+
+/* Buttons */
+.btn {
+    display: flow-root;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make buttons full-width by default */
+    box-sizing: border-box;
+}
+.btn-primary {
+    background-color: var(--primary-green);
+    color: #fff;
+}
+.btn-primary:hover { background-color: #23903a; }
+.btn-dark {
+    background-color: var(--primary-blue);
+    color: #fff;
+}
+.btn-dark:hover { background-color: #083b70; }
+
+
+/* --- RESPONSIVE LAYOUT FOR DESKTOP --- */
+@media (min-width: 992px) {
+    .page-container {
+        flex-direction: row; /* Switch to side-by-side layout */
+        align-items: flex-start; /* Align columns to the top */
+        padding: 40px;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2.25rem; }
+
+    .plan-list li { flex-wrap: nowrap; } /* Prevent plan items from wrapping on desktop */
+    
+    /* .btn { width: auto; }  */
+
+}
+
+/* Footer  */
+
+ body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa; /* A light grey background to see the component clearly */
+            margin: 0;
+        }
+
+        /* --- Footer Main Styles --- */
+        .site-footer {
+            background-color: #ffffff;
+            padding: 50px 0;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .footer-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Top Section of the Footer (Logo, Links) --- */
+        .footer-main {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr; /* 4 columns for desktop */
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        /* --- Logo and About Section --- */
+        .footer-about .logo-image {
+            width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            line-height: 1.7;
+            color: #555;
+            margin: 0;
+        }
+
+        /* --- Link Column Styling --- */
+        .footer-links h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #212529;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .footer-links a:hover {
+            color: #007bff;
+        }
+        
+        /* Social Links Specifics */
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            fill: #333;
+        }
+
+        /* --- Bottom Section of the Footer (Copyright, Legal) --- */
+        .footer-bottom {
+/*            border-top: 1px solid #e9ecef;*/
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom .copyright-text {
+            color: #6c757d;
+            margin: 0;
+        }
+
+        .footer-bottom .legal-nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 25px;
+            transition: color 0.2s ease-in-out;
+        }
+        
+        .footer-bottom .legal-nav a:hover {
+            color: #007bff;
+        }
+
+
+        /* --- Responsive Design for Tablets and Mobiles --- */
+        
+        /* For Tablets */
+        @media (max-width: 992px) {
+            .footer-main {
+                /* Switch to 2 columns */
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+            .footer-about {
+                /* Make about section span both columns */
+                text-align-last: center;
+                grid-column: 1 / -1; 
+            }
+        }
+
+        /* For Mobile Phones */
+        @media (max-width: 768px) {
+            .footer-main {
+                /* Stack into a single column */
+/*                grid-template-columns: 1fr;*/
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .footer-bottom .legal-nav {
+                display: flex;
+                gap: 20px;
+            }
+            .footer-bottom .legal-nav a {
+                margin-left: 0;
+            }
+        }
